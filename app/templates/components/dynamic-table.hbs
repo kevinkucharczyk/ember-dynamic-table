@@ -1,0 +1,24 @@
+<table class='table'>
+  <thead>
+    <tr>
+      {{#each columns as |column|}}
+        <th>
+          {{column.displayName}}
+          <span class='glyphicon glyphicon-triangle-top' aria-hidden='true' {{action 'sort' 'asc' column.key}}></span>
+          <span class='glyphicon glyphicon-triangle-bottom' aria-hidden='true' {{action 'sort' 'desc' column.key}}></span>
+        </th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each sortedContent as |item|}}
+      <tr>
+        {{#each columns as |column|}}
+          <td>
+            {{get item column.key}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
