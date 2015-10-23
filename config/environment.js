@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-dynamic-table',
     environment: environment,
-    baseURL: '/ember-dynamic-table',
-    locationType: 'hash',
+    baseURL: '/',
+    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
